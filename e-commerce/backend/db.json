@@ -15,7 +15,7 @@
     {
       "id": "hdmdu0t80yjkfqselfc",
       "name": "shorts",
-      "stock": 15,
+      "stock": 14,
       "price": 399.99,
       "shortDesc": "Made from 100% cotton.",
       "description": "High quality shorts created from 100% REAL cotton. All products are made to order and require 2-4 weeks before being shipped."
@@ -31,7 +31,7 @@
     {
       "id": "aoe8wvdxvrkfqsew67",
       "name": "shirts",
-      "stock": 51,
+      "stock": 50,
       "price": 149.99,
       "shortDesc": "100% cotton. Oversized fit.",
       "description": "Quality piece for upcoming Spring/Summer. Must have for the wardrobe closet. Sizes run oversized. While supplies last."
@@ -39,10 +39,18 @@
     {
       "id": "bmfrurdkswtkfqsf15j",
       "name": "shoes",
-      "stock": 48,
+      "stock": 47,
       "price": 229.99,
       "shortDesc": "Runs true to size.",
       "description": "Limited quantities. Stock limited per size. Custom made, 100% eco-friendly by artist Andy Worhol."
+    },
+    {
+      "id": "44pqpcna4gskol2edoh",
+      "name": "Socks",
+      "price": "9.99",
+      "stock": 59,
+      "shortDesc": "Red-Yellow High ankle socks",
+      "description": "100% wool. Features an embroidered design.\nFits US 8 - US 10"
     }
   ]
 }
