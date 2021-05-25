@@ -6,13 +6,11 @@ const ProductList = props => {
   const { products } = props.context;
   return (
     <>
-      <div className="hero is-primary">
-        <div className="hero-body container">
-          <h4 className="title">Flatiron Exclusive Merchandise</h4>
+        <div>
+          <h6 className="title"><center>Flatiron Exclusive Merchandise</center></h6>
         </div>
-      </div>
       <div className="container">
-        <div className="column columns is-multiline">
+        <center>
           {products && products.length ? (
             products.map((product, index) => (
               <ProductItem
@@ -28,7 +26,7 @@ const ProductList = props => {
               </span>
             </div>
           )}
-        </div>
+          </center>
       </div>
     </>
   );
