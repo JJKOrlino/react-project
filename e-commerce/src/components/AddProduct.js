@@ -7,7 +7,7 @@ const initState = {
   name: "",
   price: "",
   stock: "",
-  shortDesc: "",
+  shortDescription: "",
   description: ""
 };
 
@@ -19,33 +19,33 @@ class AddProduct extends Component {
 
   save = async (e) => {
     e.preventDefault();
-    const { name, price, stock, shortDesc, description } = this.state;
+    const { name, price, stock, shortDescription, description } = this.state;
 
     if (name && price) {
-      const id = Math.random().toString(36).substring(2) + Date.now().toString(36);
+      const id = Math.random().toString(35).substring(3) + Date.now().toString(35);
 
       await axios.post(
         'http://localhost:3001/products',
-        { id, name, price, stock, shortDesc, description },
+        { id, shortDescription, description, name, price, stock },
       )
 
       this.props.context.addProduct(
         {
-          name,
           price,
-          shortDesc,
+          name,
+          shortDescription,
           description,
           stock: stock || 0
         },
         () => this.setState(initState)
       );
       this.setState(
-        { flash: { status: 'is-success', msg: 'Product created successfully' }}
+        { flash: { status: 'is-success', msg: 'Product added to catalog' }}
       );
 
     } else {
       this.setState(
-        { flash: { status: 'is-danger', msg: 'Please enter name and price' }}
+        { flash: { status: 'is-danger', msg: 'Missing Fields' }}
       );
     }
   };
@@ -53,7 +53,7 @@ class AddProduct extends Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value, error: "" });
 
   render() {
-    const { name, price, stock, shortDesc, description } = this.state;
+    const { name, price, stock, shortDescription, description } = this.state;
     const { user } = this.props.context;
 
     return !(user && user.accessLevel < 1) ? (
@@ -93,7 +93,7 @@ class AddProduct extends Component {
                 />
               </div>
               <div className="field">
-                <label className="label">Available in Stock: </label>
+                <label className="label">Available: </label>
                 <input
                   className="input"
                   type="number"
@@ -107,8 +107,8 @@ class AddProduct extends Component {
                 <input
                   className="input"
                   type="text"
-                  name="shortDesc"
-                  value={shortDesc}
+                  name="shortDescription"
+                  value={shortDescription}
                   onChange={this.handleChange}
                 />
               </div>

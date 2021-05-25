@@ -21,12 +21,12 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    let user = localStorage.getItem("user");
     let cart = localStorage.getItem("cart");
+    let user = localStorage.getItem("user");
 
     const products = await axios.get('http://localhost:3001/products');
-    user = user ? JSON.parse(user) : null;
     cart = cart? JSON.parse(cart) : {};
+    user = user ? JSON.parse(user) : null;
 
     this.setState({ user,  products: products.data, cart });
   }
@@ -36,7 +36,7 @@ export default class App extends Component {
       'http://localhost:3001/login',
       { email, password },
     ).catch((res) => {
-      return { status: 401, message: 'Unauthorized' }
+      return { status: 401, message: 'Unauthorized Access' }
     })
 
     if(res.status === 200) {
@@ -67,23 +67,23 @@ export default class App extends Component {
     this.setState({ products }, () => callback && callback());
   };
 
-  addToCart = cartItem => {
+  addToCart = cartProduct => {
     let cart = this.state.cart;
-    if (cart[cartItem.id]) {
-      cart[cartItem.id].amount += cartItem.amount;
+    if (cart[cartProduct.id]) {
+      cart[cartProduct.id].amount += cartProduct.amount;
     } else {
-      cart[cartItem.id] = cartItem;
+      cart[cartProduct.id] = cartProduct;
     }
-    if (cart[cartItem.id].amount > cart[cartItem.id].product.stock) {
-      cart[cartItem.id].amount = cart[cartItem.id].product.stock;
+    if (cart[cartProduct.id].amount > cart[cartProduct.id].product.stock) {
+      cart[cartProduct.id].amount = cart[cartProduct.id].product.stock;
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     this.setState({ cart });
   };
 
-  removeFromCart = cartItemId => {
+  removeFromCart = cartProductId => {
     let cart = this.state.cart;
-    delete cart[cartItemId];
+    delete cart[cartProductId];
     localStorage.setItem("cart", JSON.stringify(cart));
     this.setState({ cart });
   };
@@ -125,10 +125,10 @@ export default class App extends Component {
           ...this.state,
           removeFromCart: this.removeFromCart,
           addToCart: this.addToCart,
-          login: this.login,
-          addProduct: this.addProduct,
           clearCart: this.clearCart,
-          checkout: this.checkout
+          checkout: this.checkout,
+          addProduct: this.addProduct,
+          login: this.login
         }}
       >
         <Router ref={this.routerRef}>
@@ -139,7 +139,7 @@ export default class App extends Component {
             aria-label="main navigation"
           >
             <div className="navbar-brand">
-              <b className="navbar-item is-size-4 ">exclusive shop</b>
+              <b className="navbar-item is-size-5 ">exclusive shop</b>
               <label
                 role="button"
                 class="navbar-burger burger"
@@ -189,10 +189,10 @@ export default class App extends Component {
             </nav>
             <Switch>
               <Route exact path="/" component={ProductList} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/cart" component={Cart} />
               <Route exact path="/add-product" component={AddProduct} />
               <Route exact path="/products" component={ProductList} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/cart" component={Cart} />
             </Switch>
           </div>
         </Router>

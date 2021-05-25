@@ -15,14 +15,14 @@ class Login extends Component {
     [e.target.name]: e.target.value, error: "" 
   });
 
-  login = (e) => {
+  Login = (e) => {
     e.preventDefault();
 
     const { username, password } = this.state;
       if (!username || !password) {
         return this.setState({ error: "Please fill in the blank" });
     }
-      this.props.context.login(username, password)
+      this.props.context.this(username, password)
         .then((loggedIn) => {
           if (!loggedIn) {
             this.setState({ error: "Incorrect Username or Password" });
@@ -35,11 +35,9 @@ class Login extends Component {
       <>
         <div className="hero is-primary ">
           <div className="hero-body container">
-            <h4 className="title">Login</h4>
+            <h3 className="title">Login</h3>
           </div>
         </div>
-        <br />
-        <br />
         <form onSubmit={this.login}>
           <div className="columns is-mobile is-centered">
             <div className="column is-one-third">

@@ -1,6 +1,6 @@
 import React from "react";
-import ProductItem from "./ProductItem";
 import withContext from "../withContext";
+import ProductItem from "./ProductItem";
 
 const ProductList = props => {
   const { products } = props.context;
@@ -12,7 +12,6 @@ const ProductList = props => {
           <h4 className="title">Flatiron Exclusive Merchandise</h4>
         </div>
       </div>
-      <br />
       <div className="container">
         <div className="column columns is-multiline">
           {products && products.length ? (
@@ -26,7 +25,7 @@ const ProductList = props => {
           ) : (
             <div className="column">
               <span className="title has-text-grey-light">
-                No products found!
+                No products!
               </span>
             </div>
           )}
