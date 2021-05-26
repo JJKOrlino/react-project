@@ -39,7 +39,7 @@
     {
       "id": "bmfrurdkswtkfqsf15j",
       "name": "shoes",
-      "stock": 47,
+      "stock": 46,
       "price": 229.99,
       "shortDesc": "Runs true to size.",
       "description": "Limited quantities. Stock limited per size. Custom made, 100% eco-friendly by artist Andy Worhol."
@@ -48,7 +48,7 @@
       "id": "44pqpcna4gskol2edoh",
       "name": "Socks",
       "price": "9.99",
-      "stock": 58,
+      "stock": 57,
       "shortDesc": "Red-Yellow High ankle socks",
       "description": "100% wool. Features an embroidered design.\nFits US 8 - US 10"
     },

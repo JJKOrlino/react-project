@@ -21,9 +21,7 @@ const ProductList = props => {
             ))
           ) : (
             <div className="column">
-              <span className="title has-text-grey-light">
-                No products!
-              </span>
+              <span className="title has-text-grey-light">No products!</span>
             </div>
           )}
           </center>
