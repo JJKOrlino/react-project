@@ -2,6 +2,7 @@
 
 A basic ecommerce website with React. Uses React Context for state management.  
 Basic methods for handling authentication and cart management.
+Uses backend server, .json server, and local storage.
 
 ## Installation Steps
 
@@ -12,11 +13,13 @@ The Github link can be found [here](https://github.com/JJKOrlino/phase-2-react-p
 2. Run `./node_modules/.bin/json-server-auth ./backend/db.json --port 3001` to start backend server
 3. Run `npm start` to start the Create React App dev server
 4. Visit http://localhost:3000/
+5. Enjoy!
 ```
 
 ## Usage
 
-Log in with either `regular@example.com` or `admin@example.com` and the password `password`.
+Log in with either `regular@example.com` or `admin@example.com`
+The password `password`
 
 
 ## Contributing
