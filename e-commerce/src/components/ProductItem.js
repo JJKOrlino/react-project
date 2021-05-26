@@ -7,12 +7,6 @@ const ProductItem = props => {
       <div className="box">
         <div className="media">
           <div className="media-left">
-            <figure className="image is-64x64">
-              <img
-                src="https://bulma.io/images/placeholders/128x128.png"
-                alt={product.shortDescription}
-              />
-            </figure>
           </div>
           <div className="media-content">
             <b style={{ textTransform: "capitalize" }}>
@@ -27,16 +21,12 @@ const ProductItem = props => {
             )}
             <div className="is-clearfix">
               <button
-                className="button is-small is-outlined is-primary   is-pulled-right"
+                className="button is-small is-outlined is-primary is-pulled-right"
                 onClick={() =>
-                  props.addToCart({
-                    id: product.name,
-                    product,
-                    amount: 1
-                  })
+                  props.addToCart({ id: product.name, product, amount: 1 })
                 }
               >
-                Add to Cart
+                + ADD TO CART
               </button>
             </div>
           </div>

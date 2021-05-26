@@ -15,7 +15,7 @@
     {
       "id": "hdmdu0t80yjkfqselfc",
       "name": "shorts",
-      "stock": 12,
+      "stock": 11,
       "price": 399.99,
       "shortDesc": "Made from 100% cotton.",
       "description": "High quality shorts created from 100% REAL cotton. All products are made to order and require 2-4 weeks before being shipped."
@@ -23,7 +23,7 @@
     {
       "id": "3dc7fiyzlfmkfqseqam",
       "name": "bags",
-      "stock": 12,
+      "stock": 11,
       "price": 89.99,
       "shortDesc": "100% canvas. Tote Bag style.",
       "description": "Premium quality. Pre-washed. Design is embroidered along with perforated text."
@@ -31,7 +31,7 @@
     {
       "id": "aoe8wvdxvrkfqsew67",
       "name": "shirts",
-      "stock": 47,
+      "stock": 46,
       "price": 149.99,
       "shortDesc": "100% cotton. Oversized fit.",
       "description": "Quality piece for upcoming Spring/Summer. Must have for the wardrobe closet. Sizes run oversized. While supplies last."

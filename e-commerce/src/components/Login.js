@@ -15,14 +15,14 @@ class Login extends Component {
     [e.target.name]: e.target.value, error: "" 
   });
 
-  Login = (e) => {
+  login = (e) => {
     e.preventDefault();
 
     const { username, password } = this.state;
       if (!username || !password) {
         return this.setState({ error: "Please fill in the blank" });
     }
-      this.props.context.this(username, password)
+      this.props.context.login(username, password)
         .then((loggedIn) => {
           if (!loggedIn) {
             this.setState({ error: "Incorrect Username or Password" });
@@ -33,47 +33,45 @@ class Login extends Component {
   render() {
     return !this.props.context.user ? (
       <>
-      <div>
-        <h3 className="title">
-          <center>Please Enter Your Login</center>
-        </h3>
-      </div>
+        <div className="hero is-primary ">
+          <div className="hero-body container">
+            <h4 className="title">Login</h4>
+          </div>
+        </div>
+        <br />
+        <br />
         <form onSubmit={this.login}>
-          <div>
-            <center>
-              <div className="column is-one-third">
-                <div className="field">
-                  <label className="label">
-                    Email: 
-                  </label>
-                  <input
-                    type="email"
-                    className="input"
-                    name="username"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="field">
-                  <label className="label">Password: </label>
-                  <input
-                    type="password"
-                    className="input"
-                    name="password"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                {this.state.error && (
-                  <div className="has-text-danger">{this.state.error}</div>
-                )}
-                <div className="field is-clearfix">
-                  <button
-                    className="button is-primary is-outlined is-pulled-right"
-                  >
-                    Submit
-                  </button>
-                </div>
+          <div className="columns is-mobile is-centered">
+            <div className="column is-one-third">
+              <div className="field">
+                <label className="label">Email: </label>
+                <input
+                  className="input"
+                  type="email"
+                  name="username"
+                  onChange={this.handleChange}
+                />
               </div>
-            </center>
+              <div className="field">
+                <label className="label">Password: </label>
+                <input
+                  className="input"
+                  type="password"
+                  name="password"
+                  onChange={this.handleChange}
+                />
+              </div>
+              {this.state.error && (
+                <div className="has-text-danger">{this.state.error}</div>
+              )}
+              <div className="field is-clearfix">
+                <button
+                  className="button is-primary is-outlined is-pulled-right"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
           </div>
         </form>
       </>
