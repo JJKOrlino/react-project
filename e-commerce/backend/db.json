@@ -39,7 +39,7 @@
     {
       "id": "bmfrurdkswtkfqsf15j",
       "name": "shoes",
-      "stock": 46,
+      "stock": 45,
       "price": 229.99,
       "shortDesc": "Runs true to size.",
       "description": "Limited quantities. Stock limited per size. Custom made, 100% eco-friendly by artist Andy Worhol."
@@ -48,7 +48,7 @@
       "id": "44pqpcna4gskol2edoh",
       "name": "Socks",
       "price": "9.99",
-      "stock": 57,
+      "stock": 56,
       "shortDesc": "Red-Yellow High ankle socks",
       "description": "100% wool. Features an embroidered design.\nFits US 8 - US 10"
     },
@@ -56,7 +56,7 @@
       "id": "v2g2gla6cfdkotb8qji",
       "name": "Rings",
       "price": "199.99",
-      "stock": "40",
+      "stock": 39,
       "shortDesc": "100% Sterling Silver",
       "description": "Made in the USA. 100% real sterling silver. Comes in one size."
     },
@@ -67,6 +67,14 @@
       "stock": "35",
       "shortDesc": "Silver and Gold watch - OS",
       "description": "Seiko watch with full functionality. Lifetime warranty. Free battery changes."
+    },
+    {
+      "id": "erjqn5qkwsnp7exny8k",
+      "shortDescription": "100% wood. OS fits all. Bundle of 3",
+      "description": "Bracelet to fit around wrist or ankle. Comes in bundle of 3. Made from 100% oak wood.",
+      "name": "Bracelet",
+      "price": "15",
+      "stock": "50"
     }
   ]
 }

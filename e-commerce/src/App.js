@@ -152,6 +152,7 @@ export default class App extends Component {
                   this.state.showMenu ? "is-active" : ""
                 }`}>
                 <Link to="/products" className="navbar-item">Products</Link>
+                <Link to="/FilterButton" className="navbar-item">Filter</Link>
 
                 {this.state.user && this.state.user.accessLevel < 1 && (
                   <Link to="/add-product" className="navbar-item">Add Product</Link>
